@@ -1,194 +1,115 @@
-/* --- 基础变量与重置 --- */
 :root {
-    --bg-color: #f4f6f9;
+    --bg-color: #f8fafc;
     --card-bg: #ffffff;
-    --text-main: #2c3e50;
-    --text-muted: #7f8c8d;
-    --accent-color: #3498db;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --accent-color: #0284c7;
     --border-color: #e2e8f0;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Meiryo, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-main);
-    line-height: 1.6;
-    padding: 40px 20px;
+    line-height: 1.7;
+    padding: 50px 20px;
 }
 
-/* --- 容器布局 --- */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-}
+.container { max-width: 850px; margin: 0 auto; }
 
-/* --- 头部样式 --- */
 header {
-    background: linear-gradient(135deg, #2c3e50, #34495e);
+    background: linear-gradient(135deg, #0f172a, #1e293b);
     color: white;
-    padding: 35px 30px;
+    padding: 40px;
     border-radius: 12px 12px 0 0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 5px;
-    letter-spacing: 1px;
-}
-
-.subtitle {
-    color: #bdc3c7;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-}
+header h1 { font-size: 2.4rem; font-weight: 700; margin-bottom: 5px; }
+.en-name { font-size: 1.4rem; color: #94a3b8; font-weight: 400; }
+.subtitle { color: #38bdf8; font-size: 1.15rem; margin-bottom: 20px; font-weight: 500; }
 
 .contact-links {
     font-size: 0.9rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
+    color: #cbd5e1;
 }
 
-.contact-links a {
-    color: #3498db;
-    text-decoration: none;
-}
+.contact-links a { color: #38bdf8; text-decoration: none; }
+.contact-links a:hover { text-decoration: underline; }
 
-.contact-links a:hover {
-    text-decoration: underline;
-}
-
-/* --- 卡片通用样式 --- */
 .card {
     background-color: var(--card-bg);
-    padding: 30px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    padding: 35px;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02), 0 2px 4px -1px rgba(0,0,0,0.01);
     border: 1px solid var(--border-color);
 }
 
 .card h2 {
-    font-size: 1.3rem;
-    color: #2c3e50;
-    border-left: 4px solid var(--accent-color);
-    padding-left: 10px;
+    font-size: 1.4rem;
+    color: #0f172a;
+    border-left: 5px solid var(--accent-color);
+    padding-left: 12px;
     margin-bottom: 20px;
 }
 
-/* --- 技能网格 --- */
+.summary-text { text-align: justify; font-size: 1rem; color: #334155; }
+.bullet-list { padding-left: 20px; color: #334155; }
+.bullet-list li { margin-bottom: 8px; }
+
+/* --- 技能网格固定 2行2列 布局 --- */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(2, 1fr); /* 严格限制为固定的 2列 */
+    gap: 25px 30px; /* 控制上下行间距 25px，左右列间距 30px */
 }
 
-.skill-category h3 {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    margin-bottom: 5px;
-}
-
+/* 确保每个分类内部的段落之间有清晰的间距 */
 .skill-category p {
-    font-weight: 500;
+    font-size: 0.95rem;
+    color: #334155;
+    margin-top: 4px; /* 让多行 <p> 之间不显得拥挤 */
 }
 
-/* --- 工作时间线 --- */
 .timeline-item {
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px dashed var(--border-color);
+    margin-bottom: 35px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9;
 }
+.timeline-item:last-child { border-bottom: none; margin-bottom: 0; }
+.timeline-header { display: flex; justify-content: space-between; font-weight: 700; font-size: 1.2rem; margin-bottom: 2px; }
+.date { color: var(--text-muted); font-size: 0.95rem; font-weight: 400; }
+.company { color: #0f172a; font-size: 1.1rem; font-weight: 600; margin-bottom: 15px; }
 
-.timeline-item:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-.timeline-header {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    font-size: 1.05rem;
-}
-
-.date {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    font-weight: normal;
-}
-
-.company {
-    color: var(--accent-color);
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin-bottom: 8px;
-}
-
-.description {
-    font-size: 0.95rem;
-    color: #555;
-    text-align: justify;
-}
-
-/* --- 项目样式 --- */
-.project-item {
+.project-block {
     background-color: #f8fafc;
-    padding: 15px 20px;
-    border-radius: 6px;
-    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 15px;
 }
+.project-title { display: flex; justify-content: space-between; font-weight: 600; font-size: 1rem; margin-bottom: 5px; flex-wrap: wrap; }
+.project-tag { color: var(--accent-color); font-size: 0.9rem; }
+.project-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px; font-family: monospace; }
 
-.project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
-    gap: 10px;
-}
+.education-list { list-style: none; }
+.education-list li { margin-bottom: 10px; font-size: 1rem; }
 
-.project-name {
-    font-weight: bold;
-}
+.pr-item h3 { font-size: 1.05rem; color: #0f172a; margin-bottom: 5px; }
+.pr-item p { font-size: 0.95rem; color: #334155; text-align: justify; }
 
-.tag {
-    background-color: #e2e8f0;
-    color: #4a5568;
-    font-size: 0.8rem;
-    padding: 2px 8px;
-    border-radius: 4px;
-}
+footer { text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 0.85rem; }
 
-/* --- 页脚 --- */
-footer {
-    text-align: center;
-    margin-top: 30px;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
-
-/* --- 移动端响应式适配 --- */
-@media (max-width: 600px) {
-    body {
-        padding: 10px 10px;
-    }
-    header {
-        padding: 20px;
-    }
-    .timeline-header {
-        flex-direction: column;
-    }
-    .date {
-        margin-top: 2px;
-        margin-bottom: 5px;
-    }
+@media (max-width: 650px) {
+    body { padding: 10px 5px; }
+    header { padding: 20px; }
+    .timeline-header { flex-direction: column; }
+    .project-title { flex-direction: column; }
+    .date { margin-top: 5px; }
 }

@@ -1,101 +1,272 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人履历 | 简历</title>
+    <title>職務経歴書 | きょう 飛 (Gong Fei)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <!-- 头部：个人基本信息 -->
+        <!-- 头部：个人基本信息与核心概述 -->
         <header>
             <div class="header-info">
-                <h1>您的名字</h1>
-                <p class="subtitle">后端开发工程师 / 系统工程师</p>
+                <div class="header-main">
+                    <h1>きょう 飛 <span class="en-name">(Gong Fei)</span></h1>
+                    <p class="subtitle">シニア后端開発工程师 / フルスタックエンジニア / PL・PM候補</p>
+                </div>
                 <div class="contact-links">
-                    <span>📍 日本 埼玉县</span>
-                    <span>📧 email@example.com</span>
-                    <span>🔗 <a href="https://github.com" target="_blank">GitHub</a></span>
+                    <span>📍 埼玉県川口市</span>
+                    <span>📧 <a href="mailto:sakagami2009@gmail.com">sakagami2009@gmail.com</a></span>
+                    <span>🔗 <a href="https://github.com/sakagami2009" target="_blank">GitHub</a></span>
                 </div>
             </div>
         </header>
 
         <!-- 核心内容区 -->
         <main>
-            <!-- 个人简介 -->
+            <!-- 職務要約 -->
             <section class="card">
-                <h2>关于我 / Summary</h2>
-                <p>
-                    拥有多年服务端开发与系统架构经验，熟练掌握常用后端技术栈与数据库管理。具备技术团队管理及 CI/CD 流程优化经验，注重代码质量与系统性能，热衷于构建高效、稳定的业务系统与独立项目开发。
+                <h2>職務要約 / Summary</h2>
+                <p class="summary-text">
+                    Javaを中心に<strong>14年以上の開発経験</strong>を持ち、基本設計から運用保守、さらには業務要件の定義やPL（プロジェクトリーダー）業務まで一貫して対応してきました。特に金融・保険・エネルギー・製造などの高信頼性が求められる大規模・ミッションクリティカルなシステムにおいて、最大200名規模のプロジェクトにおけるサブリーダーや、チームマネジメント、アーキテクチャ設計を担当。顧客の業務課題を深く理解した上での上流工程からの提案、およびQCDS（品質・コスト・納期・スコープ）を意識したプロジェクト推進に強い強みを持っています。
                 </p>
             </section>
 
-            <!-- 核心技能 -->
+            <!-- 活かせる経験・知識・技術 -->
             <section class="card">
-                <h2>专业技能 / Skills</h2>
+                <h2>活かせる経験・知識・技術 / Core Competencies</h2>
+                <ul class="bullet-list">
+                    <li>顧客へのヒアリングを通じた業務要件の整理から基本設計への落とし込み（10年以上）</li>
+                    <li>最大20名規模のチームにおける進捗管理、課題解決、品質担保、およびメンバーの育成</li>
+                    <li>金融（銀行間資金、AML）、保険、エネルギー、製造（BOM）等の多様な業務知識</li>
+                    <li>DevOpsの導入やテスト観点の標準化による、開発プロセスの効率化と不具合削減の推進</li>
+                </ul>
+            </section>
+
+            <!-- テクニカルスキル -->
+            <section class="card">
+                <h2>テクニカルスキル / Technical Skills</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>编程语言</h3>
-                        <p>Java, C++, Python, C#</p>
+                        <h3>言語 / Languages</h3>
+                        <p><strong>バックエンド：</strong>Java, Python, VB.net, Shell, C++, C#</p>
+                        <p><strong>フロントエンド：</strong>JavaScript，Kotlin</p>
                     </div>
                     <div class="skill-category">
-                        <h3>框架 & 技术</h3>
-                        <p>Spring Boot, Spring Batch, MyBatis, Docker, CI/CD</p>
+                        <h3>FW・環境 / Frameworks & Tools</h3>
+                        <p>Spring, CAP Java, UI5, Docker, Linux</p>
                     </div>
                     <div class="skill-category">
-                        <h3>数据库 & 工具</h3>
-                        <p>SQLite, Git, GitHub Copilot, Cursor</p>
+                        <h3>データベース / Databases</h3>
+                        <p>Oracle, SQL Server, MySQL, HANACloud, PostgreSQL, DB2</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>語学・資格 / Certification</h3>
+                        <p>日本語能力試験 N1</p>
+                        <p>Python 3 エンジニア認定基礎試験</p>
                     </div>
                 </div>
             </section>
 
-            <!-- 工作经历 -->
+            <!-- 職務経歴 -->
             <section class="card">
-                <h2>工作经历 / Experience</h2>
+                <h2>職務経歴 / Work Experience</h2>
                 <div class="timeline">
+                    
+                    <!-- AKKODiS -->
                     <div class="timeline-item">
                         <div class="timeline-header">
-                            <span class="role">高级后端工程师 / 团队负责人</span>
-                            <span class="date">2024.03 - 至今</span>
+                            <span class="role">正社員 / システムエンジニア</span>
+                            <span class="date">2025.04 - 現在</span>
                         </div>
-                        <div class="company">某东京 IT 咨询/SES 企划公司</div>
-                        <p class="description">
-                            负责核心服务端业务开发与系统架构优化。期间承担了约 2 年的团队管理工作，优化内部 CI/CD 基础设施，提升整体交付质量，并主导编制了企业内部的技术能力矩阵与评估报告。
-                        </p>
+                        <div class="company">AKKODiSコンサルティング株式会社</div>
+                        
+                        <div class="project-block">
+                            <div class="project-title">
+                                <span>💻 SAP BTP addonモジュール開発 (大手電機企業)</span>
+                                <span class="project-tag">2025.10 - 現在</span>
+                            </div>
+                            <p class="project-meta">【環境】 CAP Java, UI5, HANACloud | 【規模】 全200名 (メンバー)</p>
+                            <p class="description">複雑なBOM（部品表）業務における顧客の潜在的ニーズをヒアリングし、業務フローの整理から機能要件定義、基本設計を主導。周辺システムやSAP標準機能の担当チームとのインターフェース調整・仕様合意形成を推進し、大規模データ処理を考慮したアーキテクチャ設計を確立。</p>
+                        </div>
+
+                        <div class="project-block">
+                            <div class="project-title">
+                                <span>💻 大手エネルギー会社向け 配送管理システム</span>
+                                <span class="project-tag">2025.04 - 2025.09</span>
+                            </div>
+                            <p class="project-meta">【環境】 Java, Spring Boot, Oracle | 【規模】 全40名 (メンバー)</p>
+                            <p class="description">納品データの証跡不備パターンを網羅的に分析・分類し、再発防止のための設計・テスト観点マニュアルを策定して品質改善を達成。属人化していた運用手順のドキュメント化による標準化を推進したほか、ジュニアSEへの技術指導やコードレビューを率先して行いチームの生産性を向上。</p>
+                        </div>
                     </div>
+
+                    <!-- Nexus Technology -->
                     <div class="timeline-item">
                         <div class="timeline-header">
-                            <span class="role">后端开发工程师</span>
-                            <span class="date">2021.05 - 2024.03</span>
+                            <span class="role">正社員 / システムエンジニア</span>
+                            <span class="date">2020.03 - 2025.01</span>
                         </div>
-                        <div class="company">某软件研发中心</div>
-                        <p class="description">
-                            参与大型企业级系统的服务器端开发，基于 Spring Boot 与 MyBatis 进行高性能 API 设计与数据批处理流程（Spring Batch）实现，保障了系统在高并发场景下的平稳运行。
-                        </p>
+                        <div class="company">ネクサステクノロジー株式会社</div>
+
+                        <div class="project-block">
+                            <div class="project-title">
+                                <span>💻 金融機関向け 為替中継システム開発</span>
+                                <span class="project-tag">2024.04 - 2025.01</span>
+                            </div>
+                            <p class="project-meta">【環境】 Java, Spring Batch, Oracle | 【規模】 全40名 (メンバー)</p>
+                            <p class="description">金融機関間の電文交換スキームを深く理解し、複雑な業務ロジックをバッチ処理へ落とし込む基本設計を主導。エラーハンドリング、リカバリ設計、データ整合性の担保など、非機能要件を強く意識した設計・仕様調整を徹底。</p>
+                        </div>
+
+                        <div class="project-block">
+                            <div class="project-title">
+                                <span>💻 勤怠管理システムパッケージ カスタマイズ (認証機能)</span>
+                                <span class="project-tag">2023.08 - 2024.03</span>
+                            </div>
+                            <p class="project-meta">【環境】 Java, JavaScript, Linux, Oracle | 【規模】 全7名 (サブリーダー)</p>
+                            <p class="description">サブリーダーとして7名体制のチームを率い、タスクの切り出し、進捗管理、課題の早期解決を推進。認証機能における共通アーキテクチャの選定・設計を行い、フレームワークの選定や共通部品化などの環境整備を実施。</p>
+                        </div>
+
+                        <div class="project-block">
+                            <div class="project-title">
+                                <span>💻 銀行TBML防止システム (アラートバッチ作成)</span>
+                                <span class="project-tag">2022.10 - 2023.07</span>
+                            </div>
+                            <p class="project-meta">【環境】 Shell, Linux, Oracle | 【規模】 全11名 (メンバー)</p>
+                            <p class="description">マネーロンダリング相関チェック処理において、大量の取引データからリスクを早期発見するためのバッチ処理の設計・開発を担当し、正確性と処理パフォーマンスを担保。</p>
+                        </div>
+
+                        <div class="project-block">
+                            <div class="project-title">
+                                <span>💻 融資保険システム開発・契約管理システム</span>
+                                <span class="project-tag">2021.12 - 2022.09</span>
+                            </div>
+                            <p class="project-meta">【環境】 Java, Windows, SQL Server | 【規模】 全6名 (メンバー)</p>
+                            <p class="description">システムの安定稼働を維持するための保守業務に加え、業務変更に伴うアーキテクチャの精査や追加開発を担当。長期運用を見据え、保守性の高いコードへのリファクタリングを推進。</p>
+                        </div>
+
+                        <div class="project-block">
+                            <div class="project-title">
+                                <span>💻 【生命保険】ツール便アプリ開発 (顧客メール統合管理)</span>
+                                <span class="project-tag">2020.07 - 2021.11</span>
+                            </div>
+                            <p class="project-meta">【環境】 Java, Kotlin, Spring Boot, Spring Batch, SQL Server | 【規模】 全10名 (メンバー)</p>
+                            <p class="description">詳細設計から総合テストまでを担当。複雑な保険業務のロジックやデータ連携の整合性を意識し、堅牢なバックエンド設計および総合テストの観点策定を行い、品質向上に貢献。</p>
+                        </div>
                     </div>
+
+                    <!-- E-Safenet -->
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span class="role">正社員 / システムエンジニア</span>
+                            <span class="date">2015.07 - 2020.06</span>
+                        </div>
+                        <div class="company">株式会社 E-Safenet</div>
+
+                        <div class="project-block">
+                            <div class="project-title">
+                                <span>💻 BigData開発 (データ収集サブシステム基盤)</span>
+                                <span class="project-tag">2019.06 - 2020.06</span>
+                            </div>
+                            <p class="project-meta">【環境】 Java, JavaScript, Linux, DataGrid | 【規模】 全5名 (メンバー)</p>
+                            <p class="description">データ収集サブシステムのフレームワーク検討から開発までを担当。将来的なデータ量増加や他分析システムとの円滑なAPI連携を見据え、拡張性と処理速度を両立する環境構築を意識して推進。</p>
+                        </div>
+
+                        <div class="project-block">
+                            <div class="project-title">
+                                <span>💻 ScanFront スキャン機操作用Webアプリケーション開発・保守</span>
+                                <span class="project-tag">2016.07 - 2019.05</span>
+                            </div>
+                            <p class="project-meta">【環境】 Java, Linux, PostgreSQL | 【規模】 全1名 (メンバー)</p>
+                            <p class="description">旅行コースの選定や顧客登録を管理するシステムの運用保守および機能追加を担当。エンドユーザーの使いやすさとデータ更新の正確性を重視し、システム運用の仕組み化を実施。</p>
+                        </div>
+                        <!-- 大手エネルギー会社向け 電力CRMシステム -->
+                        <div class="project-block">
+                            <div class="project-title">
+                                <span>💻 大手電力会社向け 基幹CRM（顧客管理・他システム連繋）システム開発</span>
+                                <span class="project-tag">2015.07 - 2016.06</span>
+                            </div>
+                            <p class="project-meta">【環境】 Java, Spring, Oracle, Struts 2, Linux | 【規模】 全50名 (主要メンバー)</p>
+                            <p class="description">
+                                電力小売自由化に伴う、顧客管理システムおよび他基幹システムとのデータ連携サブシステムの設計・開発を担当。SEとして開発を牽引しつつ、10以上の周辺システムとの複雑なインターフェース仕様調整や跨チームの合意形成を主導しました。また、顧客データの整合性を担保するトランザクション設計や、非機能要件を意識したエラーハンドリング・リカバリ設計を徹底し、プロジェクト全体のQCDS担保と品質向上に貢献しました。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 上海 2010 - 2015 -->
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span class="role">シニアエンジニア / PL代行</span>
+                            <span class="date">2013.07 - 2015.05</span>
+                        </div>
+                        <div class="company">欧識特信息科技（上海）有限公司</div>
+
+                        <div class="project-block">
+                            <div class="project-title">
+                                <span>💻 【金融】法人更改 (銀行システム フレームワーク移行)</span>
+                                <span class="project-tag">2013.12 - 2014.06</span>
+                            </div>
+                            <p class="project-meta">【環境】 Java, Linux, Oracle | 【規模】 全30名 (代理リーダー)</p>
+                            <p class="description">30名規模のプロジェクトにおいて代理リーダー（PL代行）を任され、進捗管理、課題管理、および銀行側の技術担当者との折衝・仕様調整を担当し、難易度の高いフレームワーク移行を完遂。</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span class="role">プログラマー</span>
+                            <span class="date">2010.06 - 2013.06</span>
+                        </div>
+                        <div class="company">上海启明软件股份有限公司</div>
+
+                        <div class="project-block">
+                            <div class="project-title">
+                                <span>💻 クレジットカード延滞管理用システム</span>
+                                <span class="project-tag">2010.06 - 2013.06</span>
+                            </div>
+                            <p class="project-meta">【環境】 Java, Linux, Oracle | 【規模】 全200名 (メンバー)</p>
+                            <p class="description">クレジットカードの延滞に伴う分割金や延滞料計算処理のテストおよび品質管理を担当。厳密な計算ロジックに対し網羅的なテスト観点を策定しバグを早期発見、システムリリース後の安定稼働に貢献。</p>
+                        </div>
+                    </div>
+
                 </div>
             </section>
 
-            <!-- 项目经验/作品集 -->
+            <!-- 学歴 -->
             <section class="card">
-                <h2>项目与作品 / Projects</h2>
-                <div class="project-item">
-                    <div class="project-header">
-                        <span class="project-name">🌌 独立游戏开发：科幻太空 MMORPG 概念 Demo</span>
-                        <span class="tag">Java / 算法</span>
-                    </div>
-                    <p class="description">
-                        基于独立兴趣设计的太空星际贸易与探索模拟项目。利用 Java 编写了程序化宇宙生成算法，能够高效计算并模拟星系坐标与星球资源分布；设计了高度可定制化的飞船组件模块以及星际商业贸易底层的核心数据模型。
-                    </p>
+                <h2>学歴 / Education</h2>
+                <ul class="education-list">
+                    <li><strong>2012.03 - 2014.06</strong> 上海交通大学 专科起点本科 计算机科学与技术 卒業</li>
+                    <li><strong>2007.09 - 2010.07</strong> 上海科学技術学院 ソフトウェア専門 卒業</li>
+                    <li><strong>2004.09 - 2007.07</strong> 中国上海南湖高校 卒業</li>
+                </ul>
+            </section>
+
+            <!-- 自己PR -->
+            <section class="card">
+                <h2>自己PR / Personal Statement</h2>
+                <div class="pr-item">
+                    <h3>1. 顧客の業務課題をシステムに落とし込む「上流設計力」</h3>
+                    <p>14年以上のキャリアの中で、金融、保険、エネルギー、製造など多様な業界に携わってきました。単に言われた通りの仕様を実装するのではなく、「顧客のビジネス課題は何か」「業務フローをどう効率化すべきか」というPM視点を持って要件定義や基本設計に臨んでいます。複雑な業務ロジックを整理し、変更や改修を見込んで随時修正がかけやすい、堅牢で拡張性の高いシステム構造へ落とし込む設計力に強みがあります[cite: 1, 2]。</p>
                 </div>
+                <div class="pr-item" style="margin-top: 15px;">
+                    <h3>2. プロジェクトのQCDSを意識した「チームマネジメント力」</h3>
+                    <p>サブリーダーや代理リーダーの経験を通じ、チーム全体の生産性を最大化するためのマネジメントを実践してきました。自社のプロジェクトメンバーだけでなく顧客先の関係者など、約10名～200名規模のプロジェクトを進めた経験があります[1]。関係者が多くなるためスケジュールの遅延や認識齟齬が発生しないように、定期的に打ち合わせの機会を設けて進捗を管理。メンバーと顧客先との間に立ち、仕様や価格についても細かく調整、管理することで、大規模なプロジェクトも当初のスケジュールどおりに期日に遅れず納品することに貢献してきました。</p>
+                </div>
+            </section>
+
+            <!-- 今後の展望 -->
+            <section class="card">
+                <h2>今後の展望 / Future Vision</h2>
+                <p>
+                    これまでの豊富な開発実績とチームリードの経験を活かし、今後はPL・PMとして、プロジェクトの立ち上げから顧客折衝、リスク管理、メンバーマネジメントまで全面的に責任を持つ役割として、貴社のプロジェクトの成功に貢献したいと考えております。どうぞよろしくお願いいたします。
+                </p>
             </section>
         </main>
 
         <!-- 页脚 -->
         <footer>
-            <p>© 2026 Powered by GitHub Pages</p>
+            <p>© 2026 sakagami2009.github.io | Powered by GitHub Pages</p>
         </footer>
     </div>
 
