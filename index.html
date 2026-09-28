@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>職務経歴書 | きょう 飛 (Gong Fei)</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Keep language visibility in the page itself so GitHub Pages still works
+           if Jekyll skips style.css or the relative CSS path 404s. */
+        html[data-ui-lang="zh"] [data-i18n="ja"],
+        html:not([data-ui-lang="zh"]) [data-i18n="zh"] {
+            display: none !important;
+        }
+    </style>
     <script>
         (function () {
             var lang = localStorage.getItem("resume-lang");
             if (lang !== "ja" && lang !== "zh") lang = "ja";
-            document.documentElement.lang = lang;
+            document.documentElement.setAttribute("data-ui-lang", lang);
+            document.documentElement.lang = lang === "zh" ? "zh-CN" : "ja";
             document.title = lang === "zh"
                 ? "工作履历 | 龚飞 (Gong Fei)"
                 : "職務経歴書 | きょう 飛 (Gong Fei)";
@@ -22,26 +31,26 @@
         <header>
             <div class="header-top">
                 <div class="lang-switch" role="group" aria-label="Language">
-                    <button type="button" class="lang-btn" data-lang="ja" lang="ja">日本語</button>
-                    <button type="button" class="lang-btn" data-lang="zh" lang="zh">中文</button>
+                    <button type="button" class="lang-btn" data-lang="ja">日本語</button>
+                    <button type="button" class="lang-btn" data-lang="zh">中文</button>
                 </div>
             </div>
             <div class="header-info">
                 <div class="header-main">
                     <h1>
-                        <span class="i18n" lang="ja">きょう 飛</span>
-                        <span class="i18n" lang="zh">龚飞</span>
+                        <span data-i18n="ja">きょう 飛</span>
+                        <span data-i18n="zh">龚飞</span>
                         <span class="en-name">(Gong Fei)</span>
                     </h1>
                     <p class="subtitle">
-                        <span class="i18n" lang="ja">テックコンサルタント / フルスタックエンジニア / PL・PM</span>
-                        <span class="i18n" lang="zh">技术顾问 / 全栈工程师 / PL・PM</span>
+                        <span data-i18n="ja">テックコンサルタント / フルスタックエンジニア / PL・PM</span>
+                        <span data-i18n="zh">技术顾问 / 全栈工程师 / PL・PM</span>
                     </p>
                 </div>
                 <div class="contact-links">
                     <span>
-                        <span class="i18n" lang="ja">📍 埼玉県川口市</span>
-                        <span class="i18n" lang="zh">📍 埼玉县川口市</span>
+                        <span data-i18n="ja">📍 埼玉県川口市</span>
+                        <span data-i18n="zh">📍 埼玉县川口市</span>
                     </span>
                     <span>📧 <a href="mailto:sakagami2009@gmail.com">sakagami2009@gmail.com</a></span>
                     <span>🔗 <a href="https://github.com/sakagami2009" target="_blank">GitHub</a></span>
@@ -52,29 +61,29 @@
         <main>
             <section class="card">
                 <h2>
-                    <span class="i18n" lang="ja">職務要約 / Summary</span>
-                    <span class="i18n" lang="zh">职务摘要 / Summary</span>
+                    <span data-i18n="ja">職務要約 / Summary</span>
+                    <span data-i18n="zh">职务摘要 / Summary</span>
                 </h2>
-                <p class="summary-text i18n" lang="ja">
+                <p class="summary-text" data-i18n="ja">
                     Javaを中心に<strong>14年以上の開発経験</strong>を持ち、基本設計から運用保守、さらには業務要件の定義やPL（プロジェクトリーダー）業務まで一貫して対応してきました。特に金融・保険・エネルギー・製造などの高信頼性が求められる大規模・ミッションクリティカルなシステムにおいて、最大200名規模のプロジェクトにおけるサブリーダーや、チームマネジメント、アーキテクチャ設計を担当。顧客の業務課題を深く理解した上での上流工程からの提案、およびQCDS（品質・コスト・納期・スコープ）を意識したプロジェクト推進に強い強みを持っています。
                 </p>
-                <p class="summary-text i18n" lang="zh">
+                <p class="summary-text" data-i18n="zh">
                     以 Java 为核心，拥有<strong>14年以上开发经验</strong>，能够从基本设计到运维维护，以及业务需求定义和 PL（项目组长）工作一以贯之地应对。尤其在金融、保险、能源、制造等对高可靠性要求严格的大规模、关键任务系统中，曾在最多 200 人规模的项目中担任子组长，负责团队管理与架构设计。擅长在深入理解客户业务课题的基础上从上游工程提出方案，并以 QCDS（质量、成本、交期、范围）意识推进项目。
                 </p>
             </section>
 
             <section class="card">
                 <h2>
-                    <span class="i18n" lang="ja">活かせる経験・知識・技術 / Core Competencies</span>
-                    <span class="i18n" lang="zh">可发挥的经验・知识・技术 / Core Competencies</span>
+                    <span data-i18n="ja">活かせる経験・知識・技術 / Core Competencies</span>
+                    <span data-i18n="zh">可发挥的经验・知识・技术 / Core Competencies</span>
                 </h2>
-                <ul class="bullet-list i18n" lang="ja">
+                <ul class="bullet-list" data-i18n="ja">
                     <li>顧客へのヒアリングを通じた業務要件の整理から基本設計への落とし込み（10年以上）</li>
                     <li>最大20名規模のチームにおける進捗管理、課題解決、品質担保、およびメンバーの育成</li>
                     <li>金融（銀行間資金、AML）、保険、エネルギー、製造（BOM）等の多様な業務知識</li>
                     <li>DevOpsの導入やテスト観点の標準化による、開発プロセスの効率化と不具合削減の推進</li>
                 </ul>
-                <ul class="bullet-list i18n" lang="zh">
+                <ul class="bullet-list" data-i18n="zh">
                     <li>通过与客户沟通整理业务需求并落实到基本设计（10年以上）</li>
                     <li>最多 20 人规模团队的进度管理、课题解决、质量保障及成员培养</li>
                     <li>金融（银行间资金、AML）、保险、能源、制造（BOM）等多样化业务知识</li>
@@ -84,52 +93,52 @@
 
             <section class="card">
                 <h2>
-                    <span class="i18n" lang="ja">テクニカルスキル / Technical Skills</span>
-                    <span class="i18n" lang="zh">技术技能 / Technical Skills</span>
+                    <span data-i18n="ja">テクニカルスキル / Technical Skills</span>
+                    <span data-i18n="zh">技术技能 / Technical Skills</span>
                 </h2>
                 <div class="skills-grid">
                     <div class="skill-category">
                         <h3>
-                            <span class="i18n" lang="ja">言語 / Languages</span>
-                            <span class="i18n" lang="zh">语言 / Languages</span>
+                            <span data-i18n="ja">言語 / Languages</span>
+                            <span data-i18n="zh">语言 / Languages</span>
                         </h3>
                         <p>
-                            <strong class="i18n" lang="ja">バックエンド：</strong>
-                            <strong class="i18n" lang="zh">后端：</strong>
+                            <strong data-i18n="ja">バックエンド：</strong>
+                            <strong data-i18n="zh">后端：</strong>
                             Java, Python, VB.net, Shell, C++, C#
                         </p>
                         <p>
-                            <strong class="i18n" lang="ja">フロントエンド：</strong>
-                            <strong class="i18n" lang="zh">前端：</strong>
+                            <strong data-i18n="ja">フロントエンド：</strong>
+                            <strong data-i18n="zh">前端：</strong>
                             JavaScript, Kotlin
                         </p>
                     </div>
                     <div class="skill-category">
                         <h3>
-                            <span class="i18n" lang="ja">FW・環境 / Frameworks &amp; Tools</span>
-                            <span class="i18n" lang="zh">框架・环境 / Frameworks &amp; Tools</span>
+                            <span data-i18n="ja">FW・環境 / Frameworks &amp; Tools</span>
+                            <span data-i18n="zh">框架・环境 / Frameworks &amp; Tools</span>
                         </h3>
                         <p>Spring, CAP Java, UI5, Docker, Linux</p>
                     </div>
                     <div class="skill-category">
                         <h3>
-                            <span class="i18n" lang="ja">データベース / Databases</span>
-                            <span class="i18n" lang="zh">数据库 / Databases</span>
+                            <span data-i18n="ja">データベース / Databases</span>
+                            <span data-i18n="zh">数据库 / Databases</span>
                         </h3>
                         <p>Oracle, SQL Server, MySQL, HANACloud, PostgreSQL, DB2</p>
                     </div>
                     <div class="skill-category">
                         <h3>
-                            <span class="i18n" lang="ja">語学・資格 / Certification</span>
-                            <span class="i18n" lang="zh">语言・资格 / Certification</span>
+                            <span data-i18n="ja">語学・資格 / Certification</span>
+                            <span data-i18n="zh">语言・资格 / Certification</span>
                         </h3>
                         <p>
-                            <span class="i18n" lang="ja">日本語能力試験 N1</span>
-                            <span class="i18n" lang="zh">日语能力考试 N1</span>
+                            <span data-i18n="ja">日本語能力試験 N1</span>
+                            <span data-i18n="zh">日语能力考试 N1</span>
                         </p>
                         <p>
-                            <span class="i18n" lang="ja">Python 3 エンジニア認定基礎試験</span>
-                            <span class="i18n" lang="zh">Python 3 工程师认定基础考试</span>
+                            <span data-i18n="ja">Python 3 エンジニア認定基礎試験</span>
+                            <span data-i18n="zh">Python 3 工程师认定基础考试</span>
                         </p>
                     </div>
                 </div>
@@ -137,199 +146,199 @@
 
             <section class="card">
                 <h2>
-                    <span class="i18n" lang="ja">職務経歴 / Work Experience</span>
-                    <span class="i18n" lang="zh">工作经历 / Work Experience</span>
+                    <span data-i18n="ja">職務経歴 / Work Experience</span>
+                    <span data-i18n="zh">工作经历 / Work Experience</span>
                 </h2>
                 <div class="timeline">
 
                     <div class="timeline-item">
                         <div class="timeline-header">
                             <span class="role">
-                                <span class="i18n" lang="ja">正社員 / テックコンサルタント</span>
-                                <span class="i18n" lang="zh">正式员工 / 技术顾问</span>
+                                <span data-i18n="ja">正社員 / テックコンサルタント</span>
+                                <span data-i18n="zh">正式员工 / 技术顾问</span>
                             </span>
                             <span class="date">
-                                <span class="i18n" lang="ja">2025.04 - 現在</span>
-                                <span class="i18n" lang="zh">2025.04 - 至今</span>
+                                <span data-i18n="ja">2025.04 - 現在</span>
+                                <span data-i18n="zh">2025.04 - 至今</span>
                             </span>
                         </div>
                         <div class="company">
-                            <span class="i18n" lang="ja">AKKODiSコンサルティング株式会社</span>
-                            <span class="i18n" lang="zh">AKKODiS咨询株式会社</span>
+                            <span data-i18n="ja">AKKODiSコンサルティング株式会社</span>
+                            <span data-i18n="zh">AKKODiS咨询株式会社</span>
                         </div>
                         <div class="project-block">
                             <div class="project-title">
                                 <span>
-                                    <span class="i18n" lang="ja">💻 SAP BTP addonモジュール開発 (大手電機企業)</span>
-                                    <span class="i18n" lang="zh">💻 SAP BTP 附加模块开发（大型电机企业）</span>
+                                    <span data-i18n="ja">💻 SAP BTP addonモジュール開発 (大手電機企業)</span>
+                                    <span data-i18n="zh">💻 SAP BTP 附加模块开发（大型电机企业）</span>
                                 </span>
-                                <span class="project-tag i18n" lang="ja">2025.10 - 現在</span>
-                                <span class="project-tag i18n" lang="zh">2025.10 - 至今</span>
+                                <span class="project-tag" data-i18n="ja">2025.10 - 現在</span>
+                                <span class="project-tag" data-i18n="zh">2025.10 - 至今</span>
                             </div>
                             <p class="project-meta">
-                                <span class="i18n" lang="ja">【環境】 CAP Java, UI5, HANACloud | 【規模】 全200名 (サブリーダー)</span>
-                                <span class="i18n" lang="zh">【环境】 CAP Java, UI5, HANACloud | 【规模】 共200人（副组长）</span>
+                                <span data-i18n="ja">【環境】 CAP Java, UI5, HANACloud | 【規模】 全200名 (サブリーダー)</span>
+                                <span data-i18n="zh">【环境】 CAP Java, UI5, HANACloud | 【规模】 共200人（副组长）</span>
                             </p>
-                            <p class="description i18n" lang="ja">複雑なBOM業務において基本設計から上位会社への納品までを統括し、メンバーの経験不足に起因する技術課題・進捗遅延をマネジメント。上位会社との折衝・調整を主導し、プロジェクトを予定どおり完遂しました。</p>
-                            <p class="description i18n" lang="zh">在复杂 BOM 业务中统括从基本设计到向上游公司交付，管理因成员经验不足导致的技术课题与进度延迟。主导与上游公司的交涉与协调，按计划完成项目。</p>
+                            <p class="description" data-i18n="ja">複雑なBOM業務において基本設計から上位会社への納品までを統括し、メンバーの経験不足に起因する技術課題・進捗遅延をマネジメント。上位会社との折衝・調整を主導し、プロジェクトを予定どおり完遂しました。</p>
+                            <p class="description" data-i18n="zh">在复杂 BOM 业务中统括从基本设计到向上游公司交付，管理因成员经验不足导致的技术课题与进度延迟。主导与上游公司的交涉与协调，按计划完成项目。</p>
                         </div>
 
                         <div class="project-block">
                             <div class="project-title">
                                 <span>
-                                    <span class="i18n" lang="ja">💻 大手エネルギー会社向け 配送管理システム</span>
-                                    <span class="i18n" lang="zh">💻 面向大型能源公司的配送管理系统</span>
+                                    <span data-i18n="ja">💻 大手エネルギー会社向け 配送管理システム</span>
+                                    <span data-i18n="zh">💻 面向大型能源公司的配送管理系统</span>
                                 </span>
                                 <span class="project-tag">2025.04 - 2025.09</span>
                             </div>
                             <p class="project-meta">
-                                <span class="i18n" lang="ja">【環境】 Java, Spring Boot, Oracle | 【規模】 全40名 (メンバー)</span>
-                                <span class="i18n" lang="zh">【环境】 Java, Spring Boot, Oracle | 【规模】 共40人（成员）</span>
+                                <span data-i18n="ja">【環境】 Java, Spring Boot, Oracle | 【規模】 全40名 (メンバー)</span>
+                                <span data-i18n="zh">【环境】 Java, Spring Boot, Oracle | 【规模】 共40人（成员）</span>
                             </p>
-                            <p class="description i18n" lang="ja">納品データの証跡不備パターンを網羅的に分析・分類し、再発防止のための設計・テスト観点マニュアルを策定して品質改善を達成。属人化していた運用手順のドキュメント化による標準化を推進したほか、ジュニアSEへの技術指導やコードレビューを率先して行いチームの生産性を向上。</p>
-                            <p class="description i18n" lang="zh">全面分析并分类交付数据的凭证缺失模式，制定再发防止的设计与测试观点手册，实现质量改善。推进将依赖个人的运维步骤文档化与标准化，并率先对初级 SE 进行技术指导与代码评审，提升团队生产力。</p>
+                            <p class="description" data-i18n="ja">納品データの証跡不備パターンを網羅的に分析・分類し、再発防止のための設計・テスト観点マニュアルを策定して品質改善を達成。属人化していた運用手順のドキュメント化による標準化を推進したほか、ジュニアSEへの技術指導やコードレビューを率先して行いチームの生産性を向上。</p>
+                            <p class="description" data-i18n="zh">全面分析并分类交付数据的凭证缺失模式，制定再发防止的设计与测试观点手册，实现质量改善。推进将依赖个人的运维步骤文档化与标准化，并率先对初级 SE 进行技术指导与代码评审，提升团队生产力。</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-header">
                             <span class="role">
-                                <span class="i18n" lang="ja">正社員 / システムエンジニア</span>
-                                <span class="i18n" lang="zh">正式员工 / 系统工程师</span>
+                                <span data-i18n="ja">正社員 / システムエンジニア</span>
+                                <span data-i18n="zh">正式员工 / 系统工程师</span>
                             </span>
                             <span class="date">2020.03 - 2025.01</span>
                         </div>
                         <div class="company">
-                            <span class="i18n" lang="ja">ネクサステクノロジー株式会社</span>
-                            <span class="i18n" lang="zh">Nexus Technology 株式会社</span>
+                            <span data-i18n="ja">ネクサステクノロジー株式会社</span>
+                            <span data-i18n="zh">Nexus Technology 株式会社</span>
                         </div>
 
                         <div class="project-block">
                             <div class="project-title">
                                 <span>
-                                    <span class="i18n" lang="ja">💻 金融機関向け 為替中継システム開発</span>
-                                    <span class="i18n" lang="zh">💻 面向金融机构的外汇中继系统开发</span>
+                                    <span data-i18n="ja">💻 金融機関向け 為替中継システム開発</span>
+                                    <span data-i18n="zh">💻 面向金融机构的外汇中继系统开发</span>
                                 </span>
                                 <span class="project-tag">2024.04 - 2025.01</span>
                             </div>
                             <p class="project-meta">
-                                <span class="i18n" lang="ja">【環境】 Java, Spring Batch, Oracle | 【規模】 全40名 (メンバー)</span>
-                                <span class="i18n" lang="zh">【环境】 Java, Spring Batch, Oracle | 【规模】 共40人（成员）</span>
+                                <span data-i18n="ja">【環境】 Java, Spring Batch, Oracle | 【規模】 全40名 (メンバー)</span>
+                                <span data-i18n="zh">【环境】 Java, Spring Batch, Oracle | 【规模】 共40人（成员）</span>
                             </p>
-                            <p class="description i18n" lang="ja">金融機関間の電文交換スキームを深く理解し、複雑な業務ロジックをバッチ処理へ落とし込む基本設計を主導。エラーハンドリング、リカバリ設計、データ整合性の担保など、非機能要件を強く意識した設計・仕様調整を徹底。</p>
-                            <p class="description i18n" lang="zh">深入理解金融机构间报文交换机制，主导将复杂业务逻辑落实到批处理的基本设计。彻底落实错误处理、恢复设计、数据一致性等非功能需求方面的设计与规格调整。</p>
+                            <p class="description" data-i18n="ja">金融機関間の電文交換スキームを深く理解し、複雑な業務ロジックをバッチ処理へ落とし込む基本設計を主導。エラーハンドリング、リカバリ設計、データ整合性の担保など、非機能要件を強く意識した設計・仕様調整を徹底。</p>
+                            <p class="description" data-i18n="zh">深入理解金融机构间报文交换机制，主导将复杂业务逻辑落实到批处理的基本设计。彻底落实错误处理、恢复设计、数据一致性等非功能需求方面的设计与规格调整。</p>
                         </div>
 
                         <div class="project-block">
                             <div class="project-title">
                                 <span>
-                                    <span class="i18n" lang="ja">💻 勤怠管理システムパッケージ カスタマイズ (認証機能)</span>
-                                    <span class="i18n" lang="zh">💻 考勤管理系统套件定制（认证功能）</span>
+                                    <span data-i18n="ja">💻 勤怠管理システムパッケージ カスタマイズ (認証機能)</span>
+                                    <span data-i18n="zh">💻 考勤管理系统套件定制（认证功能）</span>
                                 </span>
                                 <span class="project-tag">2023.08 - 2024.03</span>
                             </div>
                             <p class="project-meta">
-                                <span class="i18n" lang="ja">【環境】 Java, JavaScript, Linux, Oracle | 【規模】 全7名 (リーダー)</span>
-                                <span class="i18n" lang="zh">【环境】 Java, JavaScript, Linux, Oracle | 【规模】 共7人（组长）</span>
+                                <span data-i18n="ja">【環境】 Java, JavaScript, Linux, Oracle | 【規模】 全7名 (リーダー)</span>
+                                <span data-i18n="zh">【环境】 Java, JavaScript, Linux, Oracle | 【规模】 共7人（组长）</span>
                             </p>
-                            <p class="description i18n" lang="ja">サブリーダーとして7名体制のチームを率い、タスクの切り出し、進捗管理、課題の早期解決を推進。認証機能における共通アーキテクチャの選定・設計を行い、フレームワークの選定や共通部品化などの環境整備を実施。</p>
-                            <p class="description i18n" lang="zh">作为子组长带领 7 人团队，推进任务拆分、进度管理与课题早期解决。负责认证功能的共通架构选型与设计，实施框架选型及共通组件化等环境整備。</p>
+                            <p class="description" data-i18n="ja">サブリーダーとして7名体制のチームを率い、タスクの切り出し、進捗管理、課題の早期解決を推進。認証機能における共通アーキテクチャの選定・設計を行い、フレームワークの選定や共通部品化などの環境整備を実施。</p>
+                            <p class="description" data-i18n="zh">作为子组长带领 7 人团队，推进任务拆分、进度管理与课题早期解决。负责认证功能的共通架构选型与设计，实施框架选型及共通组件化等环境整備。</p>
                         </div>
 
                         <div class="project-block">
                             <div class="project-title">
                                 <span>
-                                    <span class="i18n" lang="ja">💻 銀行TBML防止システム (アラートバッチ作成)</span>
-                                    <span class="i18n" lang="zh">💻 银行 TBML 防范系统（告警批处理开发）</span>
+                                    <span data-i18n="ja">💻 銀行TBML防止システム (アラートバッチ作成)</span>
+                                    <span data-i18n="zh">💻 银行 TBML 防范系统（告警批处理开发）</span>
                                 </span>
                                 <span class="project-tag">2022.10 - 2023.07</span>
                             </div>
                             <p class="project-meta">
-                                <span class="i18n" lang="ja">【環境】 Shell, Linux, Oracle | 【規模】 全11名 (メンバー)</span>
-                                <span class="i18n" lang="zh">【环境】 Shell, Linux, Oracle | 【规模】 共11人（成员）</span>
+                                <span data-i18n="ja">【環境】 Shell, Linux, Oracle | 【規模】 全11名 (メンバー)</span>
+                                <span data-i18n="zh">【环境】 Shell, Linux, Oracle | 【规模】 共11人（成员）</span>
                             </p>
-                            <p class="description i18n" lang="ja">マネーロンダリング相関チェック処理において、大量の取引データからリスクを早期発見するためのバッチ処理の設計・開発を担当し、正確性と処理パフォーマンスを担保。</p>
-                            <p class="description i18n" lang="zh">在反洗钱关联检查处理中，负责从大量交易数据中早期发现风险的批处理设计与开发，确保准确性与处理性能。</p>
+                            <p class="description" data-i18n="ja">マネーロンダリング相関チェック処理において、大量の取引データからリスクを早期発見するためのバッチ処理の設計・開発を担当し、正確性と処理パフォーマンスを担保。</p>
+                            <p class="description" data-i18n="zh">在反洗钱关联检查处理中，负责从大量交易数据中早期发现风险的批处理设计与开发，确保准确性与处理性能。</p>
                         </div>
 
                         <div class="project-block">
                             <div class="project-title">
                                 <span>
-                                    <span class="i18n" lang="ja">💻 融資保険システム開発・契約管理システム</span>
-                                    <span class="i18n" lang="zh">💻 融资保险系统开发・合同管理系统</span>
+                                    <span data-i18n="ja">💻 融資保険システム開発・契約管理システム</span>
+                                    <span data-i18n="zh">💻 融资保险系统开发・合同管理系统</span>
                                 </span>
                                 <span class="project-tag">2021.12 - 2022.09</span>
                             </div>
                             <p class="project-meta">
-                                <span class="i18n" lang="ja">【環境】 Java, Windows, SQL Server | 【規模】 全6名 (サブリーダー)</span>
-                                <span class="i18n" lang="zh">【环境】 Java, Windows, SQL Server | 【规模】 共6人（子组长）</span>
+                                <span data-i18n="ja">【環境】 Java, Windows, SQL Server | 【規模】 全6名 (サブリーダー)</span>
+                                <span data-i18n="zh">【环境】 Java, Windows, SQL Server | 【规模】 共6人（子组长）</span>
                             </p>
-                            <p class="description i18n" lang="ja">システムの安定稼働を維持するための保守業務に加え、業務変更に伴うアーキテクチャの精査や追加開発を担当。長期運用を見据え、保守性の高いコードへのリファクタリングを推進。</p>
-                            <p class="description i18n" lang="zh">除维持系统稳定运行的维护工作外，负责随业务变更进行架构审查与追加开发。面向长期运营推进高可维护性代码的重构。</p>
+                            <p class="description" data-i18n="ja">システムの安定稼働を維持するための保守業務に加え、業務変更に伴うアーキテクチャの精査や追加開発を担当。長期運用を見据え、保守性の高いコードへのリファクタリングを推進。</p>
+                            <p class="description" data-i18n="zh">除维持系统稳定运行的维护工作外，负责随业务变更进行架构审查与追加开发。面向长期运营推进高可维护性代码的重构。</p>
                         </div>
 
                         <div class="project-block">
                             <div class="project-title">
                                 <span>
-                                    <span class="i18n" lang="ja">💻 【生命保険】ツール便アプリ開発 (顧客メール統合管理)</span>
-                                    <span class="i18n" lang="zh">💻 【人寿保险】工具便应用开发（客户邮件统一管理）</span>
+                                    <span data-i18n="ja">💻 【生命保険】ツール便アプリ開発 (顧客メール統合管理)</span>
+                                    <span data-i18n="zh">💻 【人寿保险】工具便应用开发（客户邮件统一管理）</span>
                                 </span>
                                 <span class="project-tag">2020.07 - 2021.11</span>
                             </div>
                             <p class="project-meta">
-                                <span class="i18n" lang="ja">【環境】 Java, Kotlin, Spring Boot, Spring Batch, SQL Server | 【規模】 全10名 (サブリーダー)</span>
-                                <span class="i18n" lang="zh">【环境】 Java, Kotlin, Spring Boot, Spring Batch, SQL Server | 【规模】 共10人（子组长）</span>
+                                <span data-i18n="ja">【環境】 Java, Kotlin, Spring Boot, Spring Batch, SQL Server | 【規模】 全10名 (サブリーダー)</span>
+                                <span data-i18n="zh">【环境】 Java, Kotlin, Spring Boot, Spring Batch, SQL Server | 【规模】 共10人（子组长）</span>
                             </p>
-                            <p class="description i18n" lang="ja">詳細設計から総合テストまでを担当。複雑な保険業務のロジックやデータ連携の整合性を意識し、堅牢なバックエンド設計および総合テストの観点策定を行い、品質向上に貢献。</p>
-                            <p class="description i18n" lang="zh">负责从详细设计到综合测试。着眼于复杂保险业务逻辑与数据联动的一致性，进行稳健的后端设计及综合测试观点制定，为质量提升做出贡献。</p>
+                            <p class="description" data-i18n="ja">詳細設計から総合テストまでを担当。複雑な保険業務のロジックやデータ連携の整合性を意識し、堅牢なバックエンド設計および総合テストの観点策定を行い、品質向上に貢献。</p>
+                            <p class="description" data-i18n="zh">负责从详细设计到综合测试。着眼于复杂保险业务逻辑与数据联动的一致性，进行稳健的后端设计及综合测试观点制定，为质量提升做出贡献。</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-header">
                             <span class="role">
-                                <span class="i18n" lang="ja">正社員 / システムエンジニア</span>
-                                <span class="i18n" lang="zh">正式员工 / 系统工程师</span>
+                                <span data-i18n="ja">正社員 / システムエンジニア</span>
+                                <span data-i18n="zh">正式员工 / 系统工程师</span>
                             </span>
                             <span class="date">2015.07 - 2020.06</span>
                         </div>
                         <div class="company">
-                            <span class="i18n" lang="ja">株式会社 E-Safenet</span>
-                            <span class="i18n" lang="zh">E-Safenet 株式会社</span>
+                            <span data-i18n="ja">株式会社 E-Safenet</span>
+                            <span data-i18n="zh">E-Safenet 株式会社</span>
                         </div>
 
                         <div class="project-block">
                             <div class="project-title">
                                 <span>
-                                    <span class="i18n" lang="ja">💻 BigData開発 (データ収集サブシステム基盤)</span>
-                                    <span class="i18n" lang="zh">💻 大数据开发（数据采集子系统基础）</span>
+                                    <span data-i18n="ja">💻 BigData開発 (データ収集サブシステム基盤)</span>
+                                    <span data-i18n="zh">💻 大数据开发（数据采集子系统基础）</span>
                                 </span>
                                 <span class="project-tag">2019.06 - 2020.06</span>
                             </div>
                             <p class="project-meta">
-                                <span class="i18n" lang="ja">【環境】 Java, kafka, DataGrid, Linux | 【規模】 全10名 (メンバー)</span>
-                                <span class="i18n" lang="zh">【环境】 Java, kafka, DataGrid, Linux | 【规模】 共10人（成员）</span>
+                                <span data-i18n="ja">【環境】 Java, kafka, DataGrid, Linux | 【規模】 全10名 (メンバー)</span>
+                                <span data-i18n="zh">【环境】 Java, kafka, DataGrid, Linux | 【规模】 共10人（成员）</span>
                             </p>
-                            <p class="description i18n" lang="ja">データ収集サブシステムのフレームワーク検討から開発までを担当。将来的なデータ量増加や他分析システムとの円滑なAPI連携を見据え、拡張性と処理速度を両立する環境構築を意識して推進。</p>
-                            <p class="description i18n" lang="zh">负责从数据采集子系统的框架研讨到开发。着眼于未来数据量增长及与其他分析系统的顺畅 API 联动，推进兼顾扩展性与处理速度的环境构建。</p>
+                            <p class="description" data-i18n="ja">データ収集サブシステムのフレームワーク検討から開発までを担当。将来的なデータ量増加や他分析システムとの円滑なAPI連携を見据え、拡張性と処理速度を両立する環境構築を意識して推進。</p>
+                            <p class="description" data-i18n="zh">负责从数据采集子系统的框架研讨到开发。着眼于未来数据量增长及与其他分析系统的顺畅 API 联动，推进兼顾扩展性与处理速度的环境构建。</p>
                         </div>
 
                         <div class="project-block">
                             <div class="project-title">
                                 <span>
-                                    <span class="i18n" lang="ja">💻 ScanFront スキャン機操作用Webアプリケーション開発・保守</span>
-                                    <span class="i18n" lang="zh">💻 ScanFront 扫描机操作用 Web 应用开发与维护</span>
+                                    <span data-i18n="ja">💻 ScanFront スキャン機操作用Webアプリケーション開発・保守</span>
+                                    <span data-i18n="zh">💻 ScanFront 扫描机操作用 Web 应用开发与维护</span>
                                 </span>
                                 <span class="project-tag">2016.07 - 2019.05</span>
                             </div>
                             <p class="project-meta">
-                                <span class="i18n" lang="ja">【環境】 Java, Linux, PostgreSQL | 【規模】 全1名 (ウンマン)</span>
-                                <span class="i18n" lang="zh">【环境】 Java, Linux, PostgreSQL | 【规模】 共1人（独立担当）</span>
+                                <span data-i18n="ja">【環境】 Java, Linux, PostgreSQL | 【規模】 全1名 (ウンマン)</span>
+                                <span data-i18n="zh">【环境】 Java, Linux, PostgreSQL | 【规模】 共1人（独立担当）</span>
                             </p>
-                            <p class="description i18n" lang="ja">
+                            <p class="description" data-i18n="ja">
                                 LinuxおよびC++デバイス制御基盤上で動作する、操作UI・管理用Java Webアプリケーションの機能拡張および保守を担当。ハードウェアや既存基盤側の制約がある中で、大量のデータ転送やPDF生成に伴うWebサーバー側の高負荷・メモリリークといったボトルネックを特定し、バックエンドロジックの最適化によってシステムの連続稼働安定性を大幅に向上させました。上流のシステム特性を理解した上でアプリ側の非機能要件を担保し、製品品質の向上に貢献しました。
                             </p>
-                            <p class="description i18n" lang="zh">
+                            <p class="description" data-i18n="zh">
                                 负责在 Linux 及 C++ 设备控制基础上运行的操作 UI・管理用 Java Web 应用的功能扩展与维护。在硬件及既有基础侧存在制约的情况下，定位伴随大量数据传输与 PDF 生成的 Web 服务器侧高负载、内存泄漏等瓶颈，通过优化后端逻辑大幅提升系统连续运行稳定性。在理解上游系统特性的基础上保障应用侧非功能需求，为产品质量提升做出贡献。
                             </p>
                         </div>
@@ -337,19 +346,19 @@
                         <div class="project-block">
                             <div class="project-title">
                                 <span>
-                                    <span class="i18n" lang="ja">💻 大手エネルギー会社向け 基幹CRM（顧客管理・他システム連繋）システム開発</span>
-                                    <span class="i18n" lang="zh">💻 面向大型能源公司的核心 CRM（客户管理・与其他系统联动）系统开发</span>
+                                    <span data-i18n="ja">💻 大手エネルギー会社向け 基幹CRM（顧客管理・他システム連繋）システム開発</span>
+                                    <span data-i18n="zh">💻 面向大型能源公司的核心 CRM（客户管理・与其他系统联动）系统开发</span>
                                 </span>
                                 <span class="project-tag">2015.07 - 2016.06</span>
                             </div>
                             <p class="project-meta">
-                                <span class="i18n" lang="ja">【環境】 Java, Spring, Oracle, Struts 2, Linux | 【規模】 全50名 (メンバー)</span>
-                                <span class="i18n" lang="zh">【环境】 Java, Spring, Oracle, Struts 2, Linux | 【规模】 共50人（成员）</span>
+                                <span data-i18n="ja">【環境】 Java, Spring, Oracle, Struts 2, Linux | 【規模】 全50名 (メンバー)</span>
+                                <span data-i18n="zh">【环境】 Java, Spring, Oracle, Struts 2, Linux | 【规模】 共50人（成员）</span>
                             </p>
-                            <p class="description i18n" lang="ja">
+                            <p class="description" data-i18n="ja">
                                 電力小売自由化に伴う、顧客管理システムおよび他基幹システムとのデータ連携サブシステムの設計・開発を担当。SEとして開発を牽引しつつ、10以上の周辺システムとの複雑なインターフェース仕様調整や跨チームの合意形成を主導しました。また、顧客データの整合性を担保するトランザクション設計や、非機能要件を意識したエラーハンドリング・リカバリ設計を徹底し、プロジェクト全体のQCDS担保と品質向上に貢献しました。
                             </p>
-                            <p class="description i18n" lang="zh">
+                            <p class="description" data-i18n="zh">
                                 负责伴随电力零售自由化的客户管理系统及与其他核心系统数据联动子系统的设计与开发。作为 SE 牵头开发的同时，主导与 10 个以上周边系统的复杂接口规格调整及跨团队共识形成。彻底落实保障客户数据一致性的事务设计，以及着眼于非功能需求的错误处理・恢复设计，为项目整体的 QCDS 保障与质量提升做出贡献。
                             </p>
                         </div>
@@ -358,8 +367,8 @@
                     <div class="timeline-item">
                         <div class="timeline-header">
                             <span class="role">
-                                <span class="i18n" lang="ja">シニアエンジニア / PL代行</span>
-                                <span class="i18n" lang="zh">高级工程师 / PL 代理</span>
+                                <span data-i18n="ja">シニアエンジニア / PL代行</span>
+                                <span data-i18n="zh">高级工程师 / PL 代理</span>
                             </span>
                             <span class="date">2013.07 - 2015.05</span>
                         </div>
@@ -368,44 +377,44 @@
                         <div class="project-block">
                             <div class="project-title">
                                 <span>
-                                    <span class="i18n" lang="ja">💻 海外旅行会社向け オンライン予約・顧客管理システム</span>
-                                    <span class="i18n" lang="zh">💻 面向海外旅行社的在线预订・客户管理系统</span>
+                                    <span data-i18n="ja">💻 海外旅行会社向け オンライン予約・顧客管理システム</span>
+                                    <span data-i18n="zh">💻 面向海外旅行社的在线预订・客户管理系统</span>
                                 </span>
                                 <span class="project-tag">2014.07 - 2015.05</span>
                             </div>
                             <p class="project-meta">
-                                <span class="i18n" lang="ja">【環境】 Java, Struts 2, MySQL, VB.net | 【規模】 全15名 (主要メンバー)</span>
-                                <span class="i18n" lang="zh">【环境】 Java, Struts 2, MySQL, VB.net | 【规模】 共15人（主要成员）</span>
+                                <span data-i18n="ja">【環境】 Java, Struts 2, MySQL, VB.net | 【規模】 全15名 (主要メンバー)</span>
+                                <span data-i18n="zh">【环境】 Java, Struts 2, MySQL, VB.net | 【规模】 共15人（主要成员）</span>
                             </p>
-                            <p class="description i18n" lang="ja">
+                            <p class="description" data-i18n="ja">
                                 海外の旅行会社と旅客を結ぶ予約システムの運用保守および機能追加を担当しました。旅行コースの選定や顧客登録を管理する機能を主導。エンドユーザーの使いやすさとデータ更新の正確性を重視し、複雑な予約状況の変化にも柔軟に対応できるシステム運用の仕組み化を行いました。
                             </p>
-                            <p class="description i18n" lang="zh">
+                            <p class="description" data-i18n="zh">
                                 负责连接海外旅行社与旅客的预订系统的运维维护及功能追加。主导旅行线路选定与客户注册管理功能。重视终端用户易用性与数据更新准确性，构建能够灵活应对复杂预订状态变化的系统运营机制。
                             </p>
                         </div>
                         <div class="project-block">
                             <div class="project-title">
                                 <span>
-                                    <span class="i18n" lang="ja">💻 【金融】法人更改 (銀行システム フレームワーク移行)</span>
-                                    <span class="i18n" lang="zh">💻 【金融】法人更改（银行系统框架迁移）</span>
+                                    <span data-i18n="ja">💻 【金融】法人更改 (銀行システム フレームワーク移行)</span>
+                                    <span data-i18n="zh">💻 【金融】法人更改（银行系统框架迁移）</span>
                                 </span>
                                 <span class="project-tag">2013.7 - 2014.06</span>
                             </div>
                             <p class="project-meta">
-                                <span class="i18n" lang="ja">【環境】 Java, Linux, Oracle | 【規模】 全30名 (代理リーダー)</span>
-                                <span class="i18n" lang="zh">【环境】 Java, Linux, Oracle | 【规模】 共30人（代理组长）</span>
+                                <span data-i18n="ja">【環境】 Java, Linux, Oracle | 【規模】 全30名 (代理リーダー)</span>
+                                <span data-i18n="zh">【环境】 Java, Linux, Oracle | 【规模】 共30人（代理组长）</span>
                             </p>
-                            <p class="description i18n" lang="ja">30名規模のプロジェクトにおいて代理リーダー（PL代行）を任され、進捗管理、課題管理、および銀行側の技術担当者との折衝・仕様調整を担当し、難易度の高いフレームワーク移行を完遂。</p>
-                            <p class="description i18n" lang="zh">在 30 人规模项目中被委任为代理组长（PL 代理），负责进度管理、课题管理以及与银行侧技术负责人的交涉与规格调整，完成高难度的框架迁移。</p>
+                            <p class="description" data-i18n="ja">30名規模のプロジェクトにおいて代理リーダー（PL代行）を任され、進捗管理、課題管理、および銀行側の技術担当者との折衝・仕様調整を担当し、難易度の高いフレームワーク移行を完遂。</p>
+                            <p class="description" data-i18n="zh">在 30 人规模项目中被委任为代理组长（PL 代理），负责进度管理、课题管理以及与银行侧技术负责人的交涉与规格调整，完成高难度的框架迁移。</p>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-header">
                             <span class="role">
-                                <span class="i18n" lang="ja">プログラマー</span>
-                                <span class="i18n" lang="zh">程序员</span>
+                                <span data-i18n="ja">プログラマー</span>
+                                <span data-i18n="zh">程序员</span>
                             </span>
                             <span class="date">2010.06 - 2013.06</span>
                         </div>
@@ -414,17 +423,17 @@
                         <div class="project-block">
                             <div class="project-title">
                                 <span>
-                                    <span class="i18n" lang="ja">💻 クレジットカード延滞管理用システム</span>
-                                    <span class="i18n" lang="zh">💻 信用卡逾期管理系统</span>
+                                    <span data-i18n="ja">💻 クレジットカード延滞管理用システム</span>
+                                    <span data-i18n="zh">💻 信用卡逾期管理系统</span>
                                 </span>
                                 <span class="project-tag">2010.06 - 2013.06</span>
                             </div>
                             <p class="project-meta">
-                                <span class="i18n" lang="ja">【環境】 Java, Linux, Oracle | 【規模】 全200名 (メンバー)</span>
-                                <span class="i18n" lang="zh">【环境】 Java, Linux, Oracle | 【规模】 共200人（成员）</span>
+                                <span data-i18n="ja">【環境】 Java, Linux, Oracle | 【規模】 全200名 (メンバー)</span>
+                                <span data-i18n="zh">【环境】 Java, Linux, Oracle | 【规模】 共200人（成员）</span>
                             </p>
-                            <p class="description i18n" lang="ja">クレジットカードの延滞に伴う分割金や延滞料計算処理のテストおよび品質管理を担当。厳密な計算ロジックに対し網羅的なテスト観点を策定しバグを早期発見、システムリリース後の安定稼働に貢献。</p>
-                            <p class="description i18n" lang="zh">负责信用卡逾期所伴随的分期金及滞纳金计算处理的测试与质量管理。针对严密的计算逻辑制定全面的测试观点并早期发现缺陷，为系统发布后的稳定运行做出贡献。</p>
+                            <p class="description" data-i18n="ja">クレジットカードの延滞に伴う分割金や延滞料計算処理のテストおよび品質管理を担当。厳密な計算ロジックに対し網羅的なテスト観点を策定しバグを早期発見、システムリリース後の安定稼働に貢献。</p>
+                            <p class="description" data-i18n="zh">负责信用卡逾期所伴随的分期金及滞纳金计算处理的测试与质量管理。针对严密的计算逻辑制定全面的测试观点并早期发现缺陷，为系统发布后的稳定运行做出贡献。</p>
                         </div>
                     </div>
 
@@ -433,15 +442,15 @@
 
             <section class="card">
                 <h2>
-                    <span class="i18n" lang="ja">学歴 / Education</span>
-                    <span class="i18n" lang="zh">学历 / Education</span>
+                    <span data-i18n="ja">学歴 / Education</span>
+                    <span data-i18n="zh">学历 / Education</span>
                 </h2>
-                <ul class="education-list i18n" lang="ja">
+                <ul class="education-list" data-i18n="ja">
                     <li><strong>2012.03 - 2014.06</strong> 上海交通大学 专科起点本科 计算机科学与技术 卒業</li>
                     <li><strong>2007.09 - 2010.07</strong> 上海科学技術学院 ソフトウェア専門 卒業</li>
                     <li><strong>2004.09 - 2007.07</strong> 中国上海南湖高校 卒業</li>
                 </ul>
-                <ul class="education-list i18n" lang="zh">
+                <ul class="education-list" data-i18n="zh">
                     <li><strong>2012.03 - 2014.06</strong> 上海交通大学 专科起点本科 计算机科学与技术 毕业</li>
                     <li><strong>2007.09 - 2010.07</strong> 上海科学技术学院 软件专业 毕业</li>
                     <li><strong>2004.09 - 2007.07</strong> 中国上海南湖高中 毕业</li>
@@ -450,46 +459,46 @@
 
             <section class="card">
                 <h2>
-                    <span class="i18n" lang="ja">自己PR / Personal Statement</span>
-                    <span class="i18n" lang="zh">自我介绍 / Personal Statement</span>
+                    <span data-i18n="ja">自己PR / Personal Statement</span>
+                    <span data-i18n="zh">自我介绍 / Personal Statement</span>
                 </h2>
                 <div class="pr-item">
                     <h3>
-                        <span class="i18n" lang="ja">1. 業務課題を解決する「上流設計力」</span>
-                        <span class="i18n" lang="zh">1. 解决业务课题的「上游设计力」</span>
+                        <span data-i18n="ja">1. 業務課題を解決する「上流設計力」</span>
+                        <span data-i18n="zh">1. 解决业务课题的「上游设计力」</span>
                     </h3>
-                    <p class="i18n" lang="ja">14年以上のキャリアを通じ、金融・製造・エネルギー等多岐にわたる業界でシステム開発に従事。単なる実装にとどまらず、顧客のビジネスの本質を理解し、業務フローの最適化を見据えた要件定義・基本設計を得意としています。保守性と拡張性を考慮した堅牢なシステム構築により、中長期的な運用のしやすさを追求しています。</p>
-                    <p class="i18n" lang="zh">通过 14 年以上的职业生涯，在金融、制造、能源等多行业从事系统开发。不仅停留于实现，更擅长理解客户业务本质，着眼于业务流程优化的需求定义与基本设计。通过兼顾可维护性与扩展性的稳健系统构建，追求中长期运营的便利性。</p>
+                    <p data-i18n="ja">14年以上のキャリアを通じ、金融・製造・エネルギー等多岐にわたる業界でシステム開発に従事。単なる実装にとどまらず、顧客のビジネスの本質を理解し、業務フローの最適化を見据えた要件定義・基本設計を得意としています。保守性と拡張性を考慮した堅牢なシステム構築により、中長期的な運用のしやすさを追求しています。</p>
+                    <p data-i18n="zh">通过 14 年以上的职业生涯，在金融、制造、能源等多行业从事系统开发。不仅停留于实现，更擅长理解客户业务本质，着眼于业务流程优化的需求定义与基本设计。通过兼顾可维护性与扩展性的稳健系统构建，追求中长期运营的便利性。</p>
                 </div>
 
                 <div class="pr-item" style="margin-top: 15px;">
                     <h3>
-                        <span class="i18n" lang="ja">2. 多様な利害関係を調整する「チームマネジメント力」</span>
-                        <span class="i18n" lang="zh">2. 协调多方利害关系的「团队管理力」</span>
+                        <span data-i18n="ja">2. 多様な利害関係を調整する「チームマネジメント力」</span>
+                        <span data-i18n="zh">2. 协调多方利害关系的「团队管理力」</span>
                     </h3>
-                    <p class="i18n" lang="ja">約200名規模に至るプロジェクトにおいて、チームを牽引した経験を有します。QCDSを意識し、複雑なステークホルダー間の認識齟齬を未然に防ぐ調整力に強みがあります。定例化された進捗管理と細やかなコミュニケーションにより、大規模かつ難易度の高いプロジェクトを納期遵守・高品質で納品へと導いてきました。</p>
-                    <p class="i18n" lang="zh">在最多约 200 人规模的项目中拥有带领团队的经验。以 QCDS 为意识，擅长事前防止复杂利益相关方之间认知偏差的协调力。通过例行化的进度管理与细致沟通，将大规模且高难度的项目按时、高质量地导向交付。</p>
+                    <p data-i18n="ja">約200名規模に至るプロジェクトにおいて、チームを牽引した経験を有します。QCDSを意識し、複雑なステークホルダー間の認識齟齬を未然に防ぐ調整力に強みがあります。定例化された進捗管理と細やかなコミュニケーションにより、大規模かつ難易度の高いプロジェクトを納期遵守・高品質で納品へと導いてきました。</p>
+                    <p data-i18n="zh">在最多约 200 人规模的项目中拥有带领团队的经验。以 QCDS 为意识，擅长事前防止复杂利益相关方之间认知偏差的协调力。通过例行化的进度管理与细致沟通，将大规模且高难度的项目按时、高质量地导向交付。</p>
                 </div>
 
                 <div class="pr-item" style="margin-top: 15px;">
                     <h3>
-                        <span class="i18n" lang="ja">3. 技術探究を具現化する「インディーゲーム開発」</span>
-                        <span class="i18n" lang="zh">3. 将技术探究具现化的「独立游戏开发」</span>
+                        <span data-i18n="ja">3. 技術探究を具現化する「インディーゲーム開発」</span>
+                        <span data-i18n="zh">3. 将技术探究具现化的「独立游戏开发」</span>
                     </h3>
-                    <p class="i18n" lang="ja">技術力向上のため、インディーゲームの個人開発に注力しています。Javaを用いたコアシステムの実装や、空間演算・プロシージャル生成などのアルゴリズム設計を実践。企業開発で培った品質管理基準と、ゲーム開発における柔軟なアーキテクチャ設計を融合させることで、複雑なロジックに対する解決能力と高性能な計算処理能力を磨き続けています。</p>
-                    <p class="i18n" lang="zh">为提升技术力，专注于独立游戏的个人开发。实践使用 Java 的核心系统实现，以及空间运算、程序化生成等算法设计。将企业开发中积累的质量管理标准与游戏开发中灵活的架构设计相融合，持续打磨对复杂逻辑的解决能力与高性能计算处理能力。</p>
+                    <p data-i18n="ja">技術力向上のため、インディーゲームの個人開発に注力しています。Javaを用いたコアシステムの実装や、空間演算・プロシージャル生成などのアルゴリズム設計を実践。企業開発で培った品質管理基準と、ゲーム開発における柔軟なアーキテクチャ設計を融合させることで、複雑なロジックに対する解決能力と高性能な計算処理能力を磨き続けています。</p>
+                    <p data-i18n="zh">为提升技术力，专注于独立游戏的个人开发。实践使用 Java 的核心系统实现，以及空间运算、程序化生成等算法设计。将企业开发中积累的质量管理标准与游戏开发中灵活的架构设计相融合，持续打磨对复杂逻辑的解决能力与高性能计算处理能力。</p>
                 </div>
             </section>
 
             <section class="card">
                 <h2>
-                    <span class="i18n" lang="ja">今後の展望 / Future Vision</span>
-                    <span class="i18n" lang="zh">今后展望 / Future Vision</span>
+                    <span data-i18n="ja">今後の展望 / Future Vision</span>
+                    <span data-i18n="zh">今后展望 / Future Vision</span>
                 </h2>
-                <p class="i18n" lang="ja">
+                <p data-i18n="ja">
                     これまでの豊富な開発実績とチームリードの経験を活かし、今後はPL・PMとして、プロジェクトの立ち上げから顧客折衝、リスク管理、メンバーマネジメントまで全面的に責任を持つ役割として、貴社のプロジェクトの成功に貢献したいと考えております。どうぞよろしくお願いいたします。
                 </p>
-                <p class="i18n" lang="zh">
+                <p data-i18n="zh">
                     希望活用迄今丰富的开发实绩与团队带领经验，今后作为 PL・PM，从项目启动到客户交涉、风险管理、成员管理全面承担责任，为贵司项目的成功做出贡献。敬请多多关照。
                 </p>
             </section>
@@ -509,9 +518,13 @@
 
             function setLang(lang) {
                 if (lang !== "ja" && lang !== "zh") lang = "ja";
-                document.documentElement.lang = lang;
+                document.documentElement.setAttribute("data-ui-lang", lang);
+                document.documentElement.lang = lang === "zh" ? "zh-CN" : "ja";
                 document.title = titles[lang];
                 localStorage.setItem("resume-lang", lang);
+                document.querySelectorAll("[data-i18n]").forEach(function (el) {
+                    el.hidden = el.getAttribute("data-i18n") !== lang;
+                });
                 document.querySelectorAll(".lang-btn").forEach(function (btn) {
                     btn.setAttribute("aria-pressed", btn.getAttribute("data-lang") === lang ? "true" : "false");
                 });
@@ -523,7 +536,7 @@
                 });
             });
 
-            setLang(document.documentElement.lang || "ja");
+            setLang(document.documentElement.getAttribute("data-ui-lang") || "ja");
         })();
     </script>
 </body>

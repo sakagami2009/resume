@@ -17,8 +17,8 @@ body {
     padding: 50px 20px;
 }
 
-html:not([lang="zh"]) .i18n[lang="zh"],
-html[lang="zh"] .i18n[lang="ja"] {
+html:not([data-ui-lang="zh"]) [data-i18n="zh"],
+html[data-ui-lang="zh"] [data-i18n="ja"] {
     display: none !important;
 }
 
